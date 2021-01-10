@@ -77,15 +77,15 @@ class WindowObserver: ObservableObject {
                 self?.isKeyWindow = false
             }
             
-            #if canImport(AppKit)
-                self.willCloseObserver = NotificationCenter.default.addObserver(
-                    forName: Window.willCloseNotification,
-                    object: window,
-                    queue: .main
-                ) { [weak self] (_) in
-                    self?.isKeyWindow = false
-                }
-            #endif
+            //#if canImport(AppKit)
+            //    self.willCloseObserver = NotificationCenter.default.addObserver(
+            //        forName: Window.willCloseNotification,
+            //        object: window,
+            //        queue: .main
+            //    ) { [weak self] (_) in
+            //        self?.isKeyWindow = false
+            //    }
+            //#endif
         }
     }
 }
